@@ -117,15 +117,15 @@
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>2.22.1</version>
-<!--                    <configuration>-->
-<!--                        <systemPropertyVariables>-->
-<!--                            <propertyName>${browser}</propertyName>-->
-<!--                        </systemPropertyVariables>-->
-<!--    					<suiteXmlFiles>-->
-<!--                            &lt;!&ndash; pass testng.xml files as argument from command line &ndash;&gt;-->
-<!--                            <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
-<!--                        </suiteXmlFiles>-->
-<!--                    </configuration>-->
+                    <configuration>
+                        <systemPropertyVariables>
+                            <propertyName>${browser}</propertyName>
+                        </systemPropertyVariables>
+    					<suiteXmlFiles>
+                            <!-- pass testng.xml files as argument from command line -->
+                            <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                        </suiteXmlFiles>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <artifactId>maven-jar-plugin</artifactId>
