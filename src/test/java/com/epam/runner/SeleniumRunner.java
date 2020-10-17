@@ -12,7 +12,7 @@ import org.testng.annotations.*;
                 "json:target/Reports/Selenium/json/cucumber-report.json",
                 "html:target/Reports/Selenium/html/cucumber-report"
         },
-        features = {"src/test/resources/features/HomePage.feature"},
+        features = {"src/test/resources/features/StatesWithMoreActiveCases.feature"},
         glue = {"com.epam.steps", "com.epam.utility.hooks"},
         dryRun = false
 )

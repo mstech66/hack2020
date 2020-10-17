@@ -26,22 +26,22 @@ public class HomePageSteps extends ExtentHelper {
 
     HomePage homePage;
 
-    @Given("^User is on home page$")
-    public void userIsOnHomePage() throws ClassNotFoundException {
-        stepDefinition = scenarioDefinition.createNode(new GherkinKeyword("Given"), "User is on home page");
-        homePage = new HomePage(SeleniumRunner.getWebDriver());
-        homePage.openPage();
-    }
-
-    @When("User sorts by active cases")
-    public void userClicksOnActiveCount() throws ClassNotFoundException {
-        stepDefinition = scenarioDefinition.createNode(new GherkinKeyword("When"), "User sorts by active cases");
-        homePage.sortActiveCases();
-    }
-
-    @Then("User verifies the top three states with active")
-    public void userVerifiesTopThreeStatesWithActive() throws ClassNotFoundException {
-        stepDefinition = scenarioDefinition.createNode(new GherkinKeyword("Then"), "User verifies the top three states with active");
-        homePage.verifyStatesWithData(3, Arrays.asList("Maharashtra", "Karnataka", "Kerala"));
-    }
+//    @Given("^User is on home page$")
+//    public void userIsOnHomePage() throws ClassNotFoundException {
+//        stepDefinition = scenarioDefinition.createNode(new GherkinKeyword("Given"), "User is on home page");
+//        homePage = new HomePage(SeleniumRunner.getWebDriver());
+//        homePage.openPage();
+//    }
+//
+//    @When("User sorts by active cases")
+//    public void userClicksOnActiveCount() throws ClassNotFoundException {
+//        stepDefinition = scenarioDefinition.createNode(new GherkinKeyword("When"), "User sorts by active cases");
+//        homePage.sortActiveCases();
+//    }
+//
+//    @Then("User verifies the top three states with active")
+//    public void userVerifiesTopThreeStatesWithActive() throws ClassNotFoundException {
+//        stepDefinition = scenarioDefinition.createNode(new GherkinKeyword("Then"), "User verifies the top three states with active");
+//        homePage.verifyStatesWithData(3, Arrays.asList("Maharashtra", "Karnataka", "Kerala"));
+//    }
 }
