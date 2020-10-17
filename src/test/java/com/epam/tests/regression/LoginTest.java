@@ -18,7 +18,7 @@ public class LoginTest extends BaseTest {
 
     @Test(priority = 1)
     private void enterInfo(){
-        String name = "Umang";
+        String name = "Kavya";
         homePage.enterName(name);
         Assert.assertEquals(homePage.getTextAfterEntering(), "Hello " + name + "!");
     }
