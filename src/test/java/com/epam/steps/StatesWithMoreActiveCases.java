@@ -32,19 +32,22 @@ public class StatesWithMoreActiveCases extends ExtentHelper {
     HomePage homePage;
 
     @When("I get response for covid19 cases")
-    public void I_get_response_for_covid19_cases() {
+    public void I_get_response_for_covid19_cases() throws ClassNotFoundException{
+        stepDefinition = scenarioDefinition.createNode(new GherkinKeyword("When"), "I get response for covid19 cases");
         RestAssured.baseURI = BASE_URI;
         request = RestAssured.given();
         response = request.get();
     }
 
     @Then("I verify status code {int}")
-    public void i_verify_status_code(int statusCode) {
+    public void i_verify_status_code(int statusCode) throws ClassNotFoundException{
+        stepDefinition = scenarioDefinition.createNode(new GherkinKeyword("Then"), "I verify status code");
         Assert.assertEquals(response.getStatusCode(), statusCode);
     }
 
     @And("I get top three states with active cases")
-    public void I_get_top_three_states_with_active_cases() {
+    public void I_get_top_three_states_with_active_cases() throws ClassNotFoundException{
+        stepDefinition = scenarioDefinition.createNode(new GherkinKeyword("And"), "I get top three states with active cases");
         List<Map<String, String>> statesData = response.jsonPath().getList("statewise");
         statesData.sort(Comparator.comparing(state -> Long.parseLong(state.get("active")), Comparator.nullsLast(Comparator.reverseOrder())));
         topStates.add(statesData.get(1).get("state"));

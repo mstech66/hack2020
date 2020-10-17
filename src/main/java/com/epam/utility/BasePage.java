@@ -29,54 +29,10 @@ public abstract class BasePage {
         this.webElement = webElement;
         return webElement;
     }
-
-    public String getTitle() {
-        return webDriver.getTitle();
-    }
-
-    public void click() {
-        webElement.click();
-    }
-
-    public String getAttribute(String attributeName) {
-        return webElement.getAttribute(attributeName);
-    }
-
-    public void sendKeys(String value) {
-        webElement.sendKeys(value);
-    }
-
-    public void clearField() {
-        webElement.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-    }
-
-    public void refreshPage() {
-        webDriver.navigate().refresh();
-    }
-
-    public void waitUntilElementIsVisibleFor(By selector, long timeInSeconds) {
-        WebDriverWait webDriverWait = new WebDriverWait(webDriver, timeInSeconds);
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(selector));
-    }
-
+    
     public void waitUntilElementIsVisibleFor(WebElement selector, long timeInSeconds) {
         WebDriverWait webDriverWait = new WebDriverWait(webDriver, timeInSeconds);
         webDriverWait.until(ExpectedConditions.visibilityOf(selector));
-    }
-
-    public boolean isElementPresent(By selector) {
-        return !webDriver.findElements(selector).isEmpty();
-    }
-
-    public boolean isElementDisplayed(WebElement selector) {
-        return selector.isDisplayed();
-    }
-
-    public boolean isValidPageLoaded(String expectedPageTitle) throws PageException {
-        boolean isValidPage = webDriver.getTitle().equals(expectedPageTitle);
-        if (isValidPage) {
-            return isValidPage;
-        } else throw new PageException("The expected title doesn't match!");
     }
 
     public void explicitWait(long timeInMs) {
@@ -85,11 +41,5 @@ public abstract class BasePage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-    }
-
-    public void selectItem(WebElement dropdown, String value) {
-        this.webElement = dropdown;
-        click();
-        dropdown.findElement(By.cssSelector("li[value=" + value + "]")).click();
     }
 }

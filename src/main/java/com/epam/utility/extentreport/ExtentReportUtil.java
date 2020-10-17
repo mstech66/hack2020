@@ -11,8 +11,8 @@ public class ExtentReportUtil extends ExtentHelper {
     public static void setupExtentReport() {
         extentReports = new ExtentReports();
         ExtentHtmlReporter extentHtmlReporter = new ExtentHtmlReporter(configFileReader.getExtentReportPath());
-        extentHtmlReporter.config().setDocumentTitle("eCommerce Project");
-        extentHtmlReporter.config().setReportName("eCommerce Report");
+        extentHtmlReporter.config().setDocumentTitle("Hack20 Project");
+        extentHtmlReporter.config().setReportName("Hack20 Report");
         extentHtmlReporter.config().setTheme(Theme.DARK);
         extentHtmlReporter.config().setEncoding("utf-8");
         extentReports.attachReporter(extentHtmlReporter);
