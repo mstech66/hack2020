@@ -6,16 +6,10 @@
         <listener class-name="com.epam.utility.ListenerUtil"/>
         <listener class-name="com.epam.utility.CustomReportGenerator"/>
     </listeners>
-    <test name="Shopping Happy Path using Chrome" enabled="false">
+    <test name="Shopping Happy Path using Chrome">
         <parameter name="browser" value="chrome"/>
-        <parameter name="driverPath" value="src/test/resources/webdrivers/chromedriver.exe"/>
         <classes>
             <class name="com.epam.runner.SeleniumRunner"/>
-        </classes>
-    </test>
-    <test name="RestAssured Test" enabled="true">
-        <classes>
-            <class name="com.epam.runner.RestTestRunner"/>
         </classes>
     </test>
 </suite>
