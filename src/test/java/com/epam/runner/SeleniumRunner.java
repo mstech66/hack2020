@@ -25,9 +25,9 @@ public class SeleniumRunner extends AbstractTestNGCucumberTests {
     }
 
     @BeforeClass
-    @Parameters({"browser", "driverPath"})
-    public void setUp(String browser, String driverPath) {
-        webDriver = BrowserFactory.getDriver(browser, driverPath);
+    @Parameters({"browser"})
+    public void setUp(String browser) {
+        webDriver = BrowserFactory.getDriver(browser);
     }
 
     @AfterClass

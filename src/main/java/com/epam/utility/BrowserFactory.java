@@ -1,22 +1,48 @@
 package com.epam.utility;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Parameters;
-
 public class BrowserFactory {
-    public static WebDriver getDriver(String browserName, String driverPath) {
+
+    private BrowserFactory() {
+    }
+
+    public static WebDriver getDriver(String browserName) {
         switch (browserName) {
-            case "chrome":
-                System.setProperty("webdriver.chrome.driver", driverPath);
-                return new ChromeDriver();
             case "firefox":
-                System.setProperty("webdriver.gecko.driver", driverPath);
-                return new FirefoxDriver();
+                WebDriverManager.firefoxdriver().version("0.24.0").setup();
+                return new FirefoxDriver(getDesiredCapabilitiesFor("firefox"));
+            case "ie":
+                WebDriverManager.iedriver().version("3.1").setup();
+                return new InternetExplorerDriver(getDesiredCapabilitiesFor("ie"));
             default:
-                System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-                return new ChromeDriver();
+                WebDriverManager.chromedriver().version("86.0.4240.22").setup();
+                return new ChromeDriver(getDesiredCapabilitiesFor("chrome"));
         }
     }
+
+    private static DesiredCapabilities getDesiredCapabilitiesFor(String browser) {
+        DesiredCapabilities desiredCapabilities;
+        switch (browser) {
+            case "firefox":
+                desiredCapabilities = DesiredCapabilities.firefox();
+                break;
+            case "ie":
+                desiredCapabilities = DesiredCapabilities.internetExplorer();
+                break;
+            case "chrome":
+            default:
+                desiredCapabilities = DesiredCapabilities.chrome();
+        }
+        desiredCapabilities.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
+        desiredCapabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+        return desiredCapabilities;
+    }
 }
+

@@ -20,7 +20,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ShoppingStep extends ExtentHelper {
-    CategoryPage categoryPage;
+    HomePage homePage;
     SubcategoryPage subcategoryPage;
     ProductPage productPage;
     CartPage cartPage;
@@ -43,9 +43,9 @@ public class ShoppingStep extends ExtentHelper {
         productList = new ArrayList<>();
         productList.addAll(products);
         for (Product product : products) {
-            categoryPage = new CategoryPage(SeleniumRunner.getWebDriver());
-            categoryPage.openPage();
-            subcategoryPage = categoryPage.selectCategory(product.getCategory());
+            homePage = new HomePage(SeleniumRunner.getWebDriver());
+            homePage.openPage();
+            subcategoryPage = homePage.selectCategory(product.getCategory());
             productPage = subcategoryPage.selectSubcategory(product.getSubcategory());
             productPage.bargainProduct(product.getProduct(), product.getQuantity());
         }

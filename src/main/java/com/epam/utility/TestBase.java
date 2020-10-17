@@ -15,8 +15,7 @@ public class TestBase {
     public void setup() {
         configFileReader = new ConfigFileReader();
         String browser = configFileReader.getBrowser();
-        String driverPath = configFileReader.getDriverPath();
-        webDriver = BrowserFactory.getDriver(browser, driverPath);
+        webDriver = BrowserFactory.getDriver(browser);
     }
 
 //    @After
