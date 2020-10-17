@@ -4,8 +4,8 @@
         <theme>dark</theme>
         <encoding>UTF-8</encoding>
         <protocol>http</protocol>
-        <documentTitle>eCommerce Shopping Scenario</documentTitle>
-        <reportName>Shopping Report</reportName>
+        <documentTitle>COVID19 ORG Scenario</documentTitle>
+        <reportName>COVID19 ORG Report</reportName>
         <dateFormat>yyyy-MM-dd</dateFormat>
         <timeFormat>HH:mm:ss</timeFormat>
     </configuration>

@@ -2,33 +2,24 @@ package com.epam.steps;
 
 import com.aventstack.extentreports.GherkinKeyword;
 import com.epam.pages.HomePage;
-import com.epam.runner.SeleniumRunner;
-import com.epam.utility.DatabaseHelper;
+import com.epam.runner.CovidReportRunner;
 import com.epam.utility.extentreport.ExtentHelper;
-import com.mongodb.util.JSON;
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.json.JSONArray;
 import org.testng.Assert;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.path.json.JsonPath.from;
-import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 
@@ -64,7 +55,7 @@ public class StatesWithMoreActiveCases extends ExtentHelper {
     @Given("^User is on home page$")
     public void userIsOnHomePage() throws ClassNotFoundException {
         stepDefinition = scenarioDefinition.createNode(new GherkinKeyword("Given"), "User is on home page");
-        homePage = new HomePage(SeleniumRunner.getWebDriver());
+        homePage = new HomePage(CovidReportRunner.getWebDriver());
         homePage.openPage();
     }
 

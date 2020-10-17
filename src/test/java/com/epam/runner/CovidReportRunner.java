@@ -16,7 +16,7 @@ import org.testng.annotations.*;
         glue = {"com.epam.steps", "com.epam.utility.hooks"},
         dryRun = false
 )
-public class SeleniumRunner extends AbstractTestNGCucumberTests {
+public class CovidReportRunner extends AbstractTestNGCucumberTests {
     public static WebDriver webDriver;
 
     @BeforeSuite
