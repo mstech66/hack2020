@@ -1,0 +1,113 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-12-29T04:54:37.903Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.epam.utility.hooks.Hook.initializeTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "Covid19Count for States with Top 3 Active cases",
+        "description": "",
+        "id": "covid19count-for-states-with-top-3-active-cases;covid19count-for-states-with-top-3-active-cases;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1988000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I get response for covid19 cases",
+            "match": {
+              "location": "com.epam.steps.StatesWithMoreActiveCases.I_get_response_for_covid19_cases()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I verify status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 21
+                }
+              ],
+              "location": "com.epam.steps.StatesWithMoreActiveCases.i_verify_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 345000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I get top three states with active cases",
+            "match": {
+              "location": "com.epam.steps.StatesWithMoreActiveCases.I_get_top_three_states_with_active_cases()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2770000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User is on home page",
+            "match": {
+              "location": "com.epam.steps.StatesWithMoreActiveCases.userIsOnHomePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1446000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User sorts by active cases",
+            "match": {
+              "location": "com.epam.steps.StatesWithMoreActiveCases.userClicksOnActiveCount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3224000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User verifies the top three states with active",
+            "match": {
+              "location": "com.epam.steps.StatesWithMoreActiveCases.userVerifiesTopThreeStatesWithActive()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Covid19Count for States with Top 3 Active cases",
+    "description": "",
+    "id": "covid19count-for-states-with-top-3-active-cases",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/StatesWithMoreActiveCases.feature",
+    "tags": []
+  }
+]
