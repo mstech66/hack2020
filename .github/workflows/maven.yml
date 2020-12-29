@@ -22,9 +22,9 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn test -Dsurefire.suiteXmlFiles=src/test/resources/testng.xml
-    - name: 'Upload Artifact'
-        uses: actions/upload-artifact@v2
-        with:
-          name: Reports
-          path: target/Reports/Extent/report.html
-          retention-days: 5
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Reports
+        path: target/Reports/Extent/report.html
+        retention-days: 5
