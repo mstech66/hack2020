@@ -2,23 +2,23 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="TestSuite" duration-ms="20045" started-at="2020-12-29T04:54:28Z" finished-at="2020-12-29T04:54:48Z">
+  <suite name="TestSuite" duration-ms="15029" started-at="2020-12-30T08:34:24Z" finished-at="2020-12-30T08:34:39Z">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.epam.runner.CovidReportRunner@27f723]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Covid19 Runner" duration-ms="20045" started-at="2020-12-29T04:54:28Z" finished-at="2020-12-29T04:54:48Z">
+    <test name="Covid19 Runner" duration-ms="15029" started-at="2020-12-30T08:34:24Z" finished-at="2020-12-30T08:34:39Z">
       <class name="com.epam.runner.CovidReportRunner">
-        <test-method status="PASS" signature="setupSuite()[pri:0, instance:com.epam.runner.CovidReportRunner@27f723]" name="setupSuite" is-config="true" duration-ms="99" started-at="2020-12-29T04:54:28Z" finished-at="2020-12-29T04:54:28Z">
+        <test-method status="PASS" signature="setupSuite()[pri:0, instance:com.epam.runner.CovidReportRunner@27f723]" name="setupSuite" is-config="true" duration-ms="92" started-at="2020-12-30T08:34:23Z" finished-at="2020-12-30T08:34:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSuite -->
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.epam.runner.CovidReportRunner@27f723]" name="setUpClass" is-config="true" duration-ms="68" started-at="2020-12-29T04:54:29Z" finished-at="2020-12-29T04:54:29Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.epam.runner.CovidReportRunner@27f723]" name="setUpClass" is-config="true" duration-ms="71" started-at="2020-12-30T08:34:24Z" finished-at="2020-12-30T08:34:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.epam.runner.CovidReportRunner@27f723]" name="setUp" is-config="true" duration-ms="8384" started-at="2020-12-29T04:54:29Z" finished-at="2020-12-29T04:54:37Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.epam.runner.CovidReportRunner@27f723]" name="setUp" is-config="true" duration-ms="5767" started-at="2020-12-30T08:34:24Z" finished-at="2020-12-30T08:34:30Z">
           <params>
             <param index="0">
               <value>
@@ -29,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.epam.runner.CovidReportRunner@27f723]" name="runScenario" duration-ms="9844" started-at="2020-12-29T04:54:37Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-29T04:54:47Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.epam.runner.CovidReportRunner@27f723]" name="runScenario" duration-ms="7851" started-at="2020-12-30T08:34:30Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-30T08:34:38Z">
           <params>
             <param index="0">
               <value>
@@ -45,15 +45,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="terminate()[pri:0, instance:com.epam.runner.CovidReportRunner@27f723]" name="terminate" is-config="true" duration-ms="1190" started-at="2020-12-29T04:54:47Z" finished-at="2020-12-29T04:54:48Z">
+        <test-method status="PASS" signature="terminate()[pri:0, instance:com.epam.runner.CovidReportRunner@27f723]" name="terminate" is-config="true" duration-ms="794" started-at="2020-12-30T08:34:38Z" finished-at="2020-12-30T08:34:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminate -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.epam.runner.CovidReportRunner@27f723]" name="tearDownClass" is-config="true" duration-ms="68" started-at="2020-12-29T04:54:48Z" finished-at="2020-12-29T04:54:48Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.epam.runner.CovidReportRunner@27f723]" name="tearDownClass" is-config="true" duration-ms="46" started-at="2020-12-30T08:34:39Z" finished-at="2020-12-30T08:34:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.epam.runner.CovidReportRunner@27f723]" name="afterSuite" is-config="true" duration-ms="149" started-at="2020-12-29T04:54:48Z" finished-at="2020-12-29T04:54:49Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.epam.runner.CovidReportRunner@27f723]" name="afterSuite" is-config="true" duration-ms="149" started-at="2020-12-30T08:34:39Z" finished-at="2020-12-30T08:34:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

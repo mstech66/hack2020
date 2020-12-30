@@ -9,7 +9,7 @@
         <module name="eCommerceUI" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
+    <bytecodeTargetLevel>
       <module name="eCommerceUI" target="1.8" />
     </bytecodeTargetLevel>
   </component>
