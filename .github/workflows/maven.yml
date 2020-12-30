@@ -26,5 +26,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Reports
-        path: target/Reports/Extent/report.html
+        path: target/Reports/Extent/
         retention-days: 5

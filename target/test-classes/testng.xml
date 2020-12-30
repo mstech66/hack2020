@@ -4,7 +4,6 @@
 <suite name="TestSuite">
     <listeners>
         <listener class-name="com.epam.utility.ListenerUtil"/>
-        <listener class-name="com.epam.utility.CustomReportGenerator"/>
     </listeners>
     <test name="Covid19 Runner">
         <parameter name="browser" value="chrome"/>

@@ -147,7 +147,6 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;TestSuite&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.epam.utility.ListenerUtil&quot;/&gt;
-    &lt;listener class-name=&quot;com.epam.utility.CustomReportGenerator&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Covid19 Runner&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
@@ -204,12 +203,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.epam.runner.CovidReportRunner')
-data.setCell(0, 3, 7851);
+data.setCell(0, 3, 8551);
 window.suiteTableData['TestSuite']= { tableData: data, tableDiv: 'times-div-TestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-TestSuite">
               </div> <!-- times-div-TestSuite -->
             </div> <!-- times-div -->
@@ -242,27 +241,27 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
-                <span class="method-start">520 ms</span>
+                <span class="method-start">503 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">591 ms</span>
+                <span class="method-start">568 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("Covid19Count for States with Top 3 Active cases", "Covid19Count for States with Top 3 Active cases")</span>
-                <span class="method-start">6429 ms</span>
+                <span class="method-start">6404 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">terminate</span>
-                <span class="method-start">14280 ms</span>
+                <span class="method-start">14955 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">15074 ms</span>
+                <span class="method-start">15771 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">15129 ms</span>
+                <span class="method-start">15826 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
