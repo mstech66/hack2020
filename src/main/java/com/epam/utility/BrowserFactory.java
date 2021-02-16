@@ -22,7 +22,7 @@ public class BrowserFactory {
                 WebDriverManager.iedriver().version("3.1").setup();
                 return new InternetExplorerDriver(getDesiredCapabilitiesFor("ie"));
             default:
-                WebDriverManager.chromedriver().version("86.0.4240.22").setup();
+                WebDriverManager.chromedriver().version("88.0.4324.96").setup();
                 return new ChromeDriver(getDesiredCapabilitiesFor("chrome"));
         }
     }

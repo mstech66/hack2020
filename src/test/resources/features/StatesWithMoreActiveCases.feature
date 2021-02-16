@@ -9,5 +9,5 @@ Feature: Covid19Count for States with Top 3 Active cases
     Then User verifies the top three states with active
 
     Examples:
-    |statusCode|
-    |200       |
+      | statusCode |
+      | 200        |
